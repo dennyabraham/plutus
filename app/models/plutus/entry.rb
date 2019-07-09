@@ -29,7 +29,7 @@ module Plutus
     else
       belongs_to :commercial_document, :polymorphic => true
     end
-
+    has_many :amounts,        class_name: "Plutus::Amount", dependent: :destroy
     has_many :credit_amounts, :extend => AmountsExtension, :class_name => 'Plutus::CreditAmount', :inverse_of => :entry
     has_many :debit_amounts, :extend => AmountsExtension, :class_name => 'Plutus::DebitAmount', :inverse_of => :entry
     has_many :credit_accounts, :through => :credit_amounts, :source => :account, :class_name => 'Plutus::Account'
