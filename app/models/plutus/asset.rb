@@ -7,7 +7,7 @@ module Plutus
   # @see http://en.wikipedia.org/wiki/Asset Assets
   #
   # @author Michael Bulat
-  class Asset < ::Plutus::Account
+  class Asset < Account
 
     self.normal_credit_balance = false
 
