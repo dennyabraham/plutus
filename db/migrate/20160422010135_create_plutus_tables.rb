@@ -25,6 +25,8 @@ class CreatePlutusTables < ActiveRecord::Migration[4.2]
       t.references :account
       t.references :entry
       t.decimal :amount, :precision => 20, :scale => 10
+
+      t.timestamps
     end
     add_index :plutus_amounts, :type
     add_index :plutus_amounts, [:account_id, :entry_id]
