@@ -7,7 +7,7 @@ require "plutus/version"
 require "date"
 
 Gem::Specification.new do |s|
-  s.name = %q{plutus}
+  s.name = %q{tyche}
   s.version = Plutus::VERSION
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
